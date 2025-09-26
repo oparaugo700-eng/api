@@ -33,7 +33,7 @@ export default async function SignIn() {
                         <form
                             action={async () => {
                                 "use server"
-                                await signIn("google")
+                                await signIn("google", { redirectTo: "/" })
                             }}
                             className="justify-items-center">
                             <Button className="w-full h-[45px]  hover:shadow-md rounded-md md:w-full md:h-[45px] flex justify-center items-center gap-3 md:rounded-md md:hover:shadow-md cursor-pointer bg-orange-400" type="submit">
