@@ -15,7 +15,6 @@ export default async function Home() {
         <main className="min-h-[50vh]  lg:w-[800px] lg:border-2 shadow-2xl rounded-lg mt-[7em] mb-[2em] lg:mx-auto">
           <section className="flex flex-col lg:flex-row  lg:gap-[6em]">
             <div className="lg:pl-17 pt-5 pb-9 xl:pb-0 flex justify-center items-center">
-
               <Image
                 src={session?.user?.image}
                 width={200}
