@@ -9,13 +9,9 @@ import { auth, signIn } from '@/auth';
 export default async function SignIn() {
     const session = await auth()
     console.log(session)
-
     return (
         <>
-
             <main className="min-h-screen flex justify-center px-2 md:px-12 lg:px-16 py-4 md:py-6 lg:py-12">
-
-
                 <div className="w-full md:w-[356px] max-h-[420px] flex flex-col gap-8 rounded md:shadow-md md:px-3 md:py-4">
                     <div>
                         <h1 className="text-3xl font-semibold text-center">Sign In</h1>
@@ -37,7 +33,7 @@ export default async function SignIn() {
                         <form
                             action={async () => {
                                 "use server"
-                                await signIn("google")
+                                await signIn("google", { redirectTo: "/" })
                             }}
                             className="justify-items-center">
                             <Button className="w-full h-[45px]  hover:shadow-md rounded-md md:w-full md:h-[45px] flex justify-center items-center gap-3 md:rounded-md md:hover:shadow-md cursor-pointer bg-orange-400" type="submit">
@@ -49,7 +45,7 @@ export default async function SignIn() {
                         <form
                             action={async () => {
                                 "use server"
-                                await signIn("github")
+                                await signIn("github", { redirectTo: "/" })
                             }}
                             className="justify-items-center">
                             <Button className="w-full h-[45px]  hover:shadow-md rounded-md md:w-full md:h-[45px] flex justify-center items-center gap-3 md:rounded-md md:hover:shadow-md cursor-pointer bg-orange-400" type="submit">
