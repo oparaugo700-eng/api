@@ -3,7 +3,7 @@ import Image from "next/image";
 import { auth, signOut } from "@/auth";
 import { Check } from "@/config/check";
 // import { db } from "@/config/firebase-configure";
-// import { doc, getFirestore, setDoc } from "firebase/firestore";
+// import { addDoc, collection } from "firebase/firestore";
 
 export default async function Home() {
   const session = await auth()

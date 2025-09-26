@@ -15,7 +15,7 @@ export default function Product() {
                 const items = Array.isArray(data.products) ? data.products : data.products || [data];
                 console.log(items);
                 setPro(items.map((item) => (
-                    <>
+                    <section key={item.id}>
                         {/* <form>
                             <select onChange={(e) => setFilter(e.target.value)}>
                                 <option>All</option>
@@ -26,10 +26,7 @@ export default function Product() {
                             </select>
                         </form> */}
 
-
-
-
-                        <div className="border-2 bg-white p-4 shadow" key={item.id}>
+                        <div className="border-2 bg-white p-4 shadow" >
                             <img
                                 src={item.images[0]}
                                 width={200}
@@ -65,7 +62,7 @@ export default function Product() {
                                 </p>
                             </div>
                         </div>
-                    </>
+                    </section>
                 )));
             } catch (error) {
                 setError("Failed to load, possibly network issues");
