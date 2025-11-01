@@ -28,7 +28,7 @@ export default function Product() {
         }
         fetchTodo()
     }, [pro])
-    if (error) return <p className="text-red-500 lg:mt-[8em] text-center">Error: {error}</p>;
+    if (error) return <p className="text-red-500 lg:mt-[8em] text-center min-h-[56vh]">Error: {error}</p>;
 
 
 

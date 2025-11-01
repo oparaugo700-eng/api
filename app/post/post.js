@@ -29,7 +29,7 @@ export default function Post() {
         }
         fetchData()
     }, [])
-    if (error) return <p className="text-red-500 lg:mt-[8em] text-center">Error: {error}</p>;
+    if (error) return <p className="text-red-500 lg:mt-[8em] text-center min-h-[56vh]">Error: {error}</p>;
 
     return (
         <section className='min-h-[100vh] grid grid-cols-1 md:grid-cols-2 gap-4 p-4'>

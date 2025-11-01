@@ -9,7 +9,7 @@ const Footer = () => {
     const year = new Date().getFullYear()
 
     return (
-        <footer className='text-white bg-neutral-700 lg:sticky  lg:bottom-0 lg:w-full lg:mt-[3em]'>
+        <footer className='text-white bg-neutral-700  lg:bottom-0 lg:w-full lg:mt-[3em]'>
             <main className='grid text-center gap-3  sm:grid-cols-2 sm:gap-10 md:grid-cols-3  pt-2'>
                 <section>
                     <h2 className='font-bold text-lg md:text-2xl '>API</h2>

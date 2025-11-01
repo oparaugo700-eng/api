@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 
 export default function Product() {
     const [pro, setPro] = useState(null)
-    // const [products, setProducts] = useState([]);
-    // const [filter, setFilter] = useState("");
     const [error, setError] = useState(null);
+
+
 
     useEffect(() => {
         async function fetchData() {
@@ -16,15 +16,7 @@ export default function Product() {
                 console.log(items);
                 setPro(items.map((item) => (
                     <section key={item.id}>
-                        {/* <form>
-                            <select onChange={(e) => setFilter(e.target.value)}>
-                                <option>All</option>
-                                <option value={item.cartegory}>Beauty</option>
-                                <option value={item.cartegory}>Fragrance</option>
-                                <option value={item.cartegory}>Furniture</option>
-                                <option value={item.cartegory}>Groceries</option>
-                            </select>
-                        </form> */}
+
 
                         <div className="border-2 bg-white p-4 shadow" >
                             <img
@@ -71,21 +63,14 @@ export default function Product() {
         fetchData();
     }, []);
 
-    if (error) return <p className="text-red-500 lg:mt-[8em] text-center">Error: {error}</p>;
+    if (error) return <p className="text-red-500 lg:mt-[8em] text-center min-h-[56vh] ">Error: {error}</p>;
 
     return (
-        <main>'
-            {/* <input
-                type="text"
-                placeholder="Search by title or brand..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-[300px] mt-9 mb-4 px-4 py-2 border rounded flex justify-center items-center"
-            /> */}
+        <main className="min-h-[100vh] ">
 
 
 
-            <section className="min-h-[100vh] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
                 {pro}
             </section>
         </main>

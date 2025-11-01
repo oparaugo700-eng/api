@@ -43,7 +43,7 @@ export default function Product() {
         fetchData();
 
     }, [])
-    if (error) return <p className="text-red-500 lg:mt-[8em] text-center">Error: {error}</p>;
+    if (error) return <p className="text-red-500 lg:mt-[8em] text-center min-h-[56vh]">Error: {error}</p>;
 
 
 
@@ -51,8 +51,11 @@ export default function Product() {
 
 
     return (
-        <section className='min-h-[100vh] p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 shadow'>
-            {recipe}
+        <section className='min-h-[100vh] mt-5 '>
+            <div className="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 shadow">
+                {recipe}
+            </div>
+
         </section>
     )
 }

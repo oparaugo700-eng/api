@@ -9,7 +9,7 @@ export default function Navbar() {
         setMenuOpen(!menuOpen)
     }
     return (
-        <header className='mb-[3em]'>
+        <header className='mb-[1em]  md:mb-[6em]'>
             <section className='bg-neutral-700 flex justify-between items-center h-[4em] px-10 text-white shadow-sm drop-shadow-neutral-500 lg:fixed  lg:top-0 lg:right-0 lg:left-0 lg:z-5'>
                 <Link href='/'> <h1 className='text-3xl font-bold '>API</h1></Link>
                 <nav className='hidden  md:flex gap-4 list-none'>
